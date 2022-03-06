@@ -1,0 +1,48 @@
+.navbar {
+    color: orange;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000000;
+  }
+
+ 
+  .menu a{
+    color: orange;
+    margin-left: 100px;
+    text-decoration: none;
+    padding: 6px;
+
+  }
+
+
+  
+  .ideaboard {
+      width: 600px;
+      height: 450px;
+      position:relative;
+      background-color: #ffffff;
+      align-items: center;
+      margin: 30px auto;
+      border:3px solid darkgray;
+      border-radius: 1rem;
+      
+  }
+  
+
+.btn{
+  position: relative;
+  align-items: center;
+  background-color: #749fe4;
+  justify-content: center;
+  border:3px solid darkgray;
+  color: #ffffff;
+  border-radius: 2rem;
+  padding: 5px 20px;
+  margin: -6rem auto 5%;
+  display: flex;
+}
+  
