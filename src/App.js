@@ -17,7 +17,7 @@ function App() {
           </Route>
         </Switch>
         <Switch>
-          <Route path="/board">
+          <Route path="/board" >
             <Board />
           </Route>
         </Switch>

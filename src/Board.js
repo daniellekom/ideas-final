@@ -1,20 +1,55 @@
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-
-const IdeaBoard = () => {
-    return (
-     <> 
-      <motion.section className="ideaboard" initial={{x:'-20vw'}} animate={{x:0}}>
-     <h1 style={{align: "center", marginLeft:"40%",marginTop:"50px", position: "absolute", color:"orange"}}> Idea Board</h1>
+export default function Board() {
+  const [ideas, setIdeas] = useState([]);
+  const handleClick = () => {
       
       
-      </motion.section>
-     <motion.button className="btn" whileHover={{scale:1.1, textShadow:"0px,0px,8px rgb(240, 128, 128)",
-     boxShadow:"0px,0px,8px rgb(225, 118, 30)"}} >
- Create your own</motion.button>
-  
-     </>
-    );
   };
-  
-  export default IdeaBoard;
+
+  useEffect(() => {
+    // fetch("https://walky-ideas.uk.r.appspot.com/ideas")
+    fetch("http://localhost:3001/ideas")
+      .then((response) => response.json())
+      .then((data) => setIdeas(data.ideas))
+      .catch(alert);
+  }, []);
+
+  return (
+    <div>
+      <section
+        className="ideaboard"
+        initial={{ x: "-20vw" }}
+        animate={{ x: 0 }}
+      >
+        <h1
+          style={{
+            align: "center",
+            marginLeft: "40%",
+            marginTop: "50px",
+            position: "absolute",
+            color: "orange",
+          }}
+        >
+          Idea Board
+        </h1>
+        {ideas.map((idea) => {
+        return (
+          <div className="ideas" key={idea.id}>
+            <h2>Idea by: {idea.createdBy}</h2>
+            <h4>Title: {idea.title}</h4>
+            <h4>Description: {idea.description}</h4>
+            <h4>Looking for: {idea.lookingFor}</h4>
+          </div>
+        );
+      })}
+      </section>
+      <Link to="/create">
+      <button className="btn">
+        Create your own
+      </button>
+      </Link>
+    </div>
+  );
+}
