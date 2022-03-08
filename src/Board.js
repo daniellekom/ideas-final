@@ -3,14 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Board() {
   const [ideas, setIdeas] = useState([]);
-  const handleClick = () => {
-      
-      
-  };
 
   useEffect(() => {
-    // fetch("https://walky-ideas.uk.r.appspot.com/ideas")
-    fetch("http://localhost:3001/ideas")
+    fetch("https://walky-ideas.uk.r.appspot.com/ideas")
+    // fetch("http://localhost:3001/ideas")
       .then((response) => response.json())
       .then((data) => setIdeas(data.ideas))
       .catch(alert);
@@ -48,7 +44,7 @@ export default function Board() {
       <Link to="/create">
       <button className="btn">
         Create your own
-      </button>
+      </button> 
       </Link>
     </div>
   );
