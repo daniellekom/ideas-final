@@ -1,77 +1,110 @@
+* {
+  color: rgb(123, 38, 233);
+}
+
 .navbar {
-    color: orange;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    border-bottom: 1px solid #000000;
-  }
+  color: orange;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000000;
+}
 
- 
-  .menu a{
-    color: orange;
-    margin-left: 100px;
-    text-decoration: none;
-    padding: 6px;
+.menu a {
+  color: #7499df solid;
+  margin-left: 100px;
+  text-decoration: none;
+  padding: 6px;
+}
 
-  }
+.ideaboard {
+  /* display: flex; */
+  width: 600px;
+  height: 450px;
+  position: relative;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 30px auto;
+  border-radius: 1rem;
+  border: rgb(130, 128, 233);
+  outline: #7499df solid 10px;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: wrap-reverse;
+  column-gap: 10;
+}
 
+.idea {
+  width: 600px;
+  position: relative;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 30px auto;
+  border: 3px solid darkgray;
+  border-radius: 1rem;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.h1 {
+  color: rgb(130, 128, 233);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-weight: 900;
+}
+
+.card h3 {
+  color: rgb(206, 117, 179);
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.card h5 {
+  color: rgb(130, 128, 233);
+  font-family: sans-serif;
+}
+
+.card-button{
+  border-radius:  1em;
+  color: azure;
+  background-color:rgb(130, 128, 233);
+  border: none;
+  padding: 5px 20px;
+  margin: -6rem auto 5%;
   
-  .ideaboard {
-      width: 600px;
-      height: 450px;
-      position:relative;
-      background-color: #ffffff;
-      align-items: center;
-      margin: 30px auto;
-      border:3px solid darkgray;
-      border-radius: 1rem;
-      
-  }
-  
-  .idea{
-    width: 600px;
-    height: 450px;
-    position:relative;
-    background-color: #ffffff;
-    align-items: center;
-    margin: 30px auto;
-    border:3px solid darkgray;
-    border-radius: 1rem;
-    
+}
 
+.card-button:hover{
+  background-color: coral;
 
-  }
-  
+}
 
-.btn{
+.btn {
   position: relative;
   align-items: center;
   background-color: #749fe4;
   justify-content: center;
-  border:3px solid darkgray;
+  border: 3px solid darkgray;
   color: #ffffff;
   border-radius: 2rem;
   padding: 5px 20px;
   margin: -6rem auto 5%;
-  display: flex;
-  text-decoration: none;
 }
-  .btn1{
-    position: relative;
-    align-items: center;
-    background-color: #749fe4;
-    justify-content: center;
-    border:3px solid rgb(245, 229, 229);
-    color: #ffffff;
-    border-radius: 2rem;
-    padding: 5px 20px;
-    margin: -6rem auto 5%;
-    display: flex;
-    text-decoration: none;
 
+.MuiButtonBase-root {
+  top: -492px;
+  left: 800px;
+  color: #ffffff;
 
-  }
+}

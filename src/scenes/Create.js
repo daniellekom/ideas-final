@@ -1,7 +1,7 @@
 //in the form create a handle submit function with prevent default 
 //second step of function what should happen by use state values []
 //create use states for each input field title, created by etc
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 

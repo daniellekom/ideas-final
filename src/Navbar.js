@@ -2,17 +2,17 @@
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>Walky Ideas</h1>
+      <h2>BABY GENIUS</h2>
       <div className="menu" 
 style={{
   color: "white",
-  marginleft: "100px",
+  marginLeft:"auto",
   textDecoration: "none",
   padding: "9px",
   borderRadius:"1rem"
+  
 }}>       
-        <a href="/create">Create +</a> 
-        <a href="/invite">Invite</a>
+     
         <a href="/Board">Board</a>
         <a href="/Welcome">Logout</a>
        

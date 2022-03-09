@@ -1,8 +1,8 @@
 import Navbar from "./Navbar";
 import Welcome from "./Welcome";
-import Board from "./Board";
-import Create from "./Create";
-import Invite from "./Invite";
+import Board from "./scenes/Board";
+import Create from "./scenes/Create";
+import Invite from "./scenes/Invite";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
