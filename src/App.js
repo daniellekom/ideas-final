@@ -27,7 +27,7 @@ function App() {
           </Route>
         </Switch>
         <Switch>
-          <Route path= "/invite">
+          <Route path= "/invite/:id">
             <Invite/>
           </Route>
         </Switch>

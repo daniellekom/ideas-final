@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import IdeaCard from "./components/IdeaCard";
-import Invite from "./Invite";
 
 export default function Board() {
   const [ideas, setIdeas] = useState([]);
-  const [active] = useState(false);
+ 
 
   useEffect(() => {
     fetch("https://walky-ideas.uk.r.appspot.com/ideas")

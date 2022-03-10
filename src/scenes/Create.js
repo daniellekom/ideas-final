@@ -1,6 +1,8 @@
 //in the form create a handle submit function with prevent default 
 //second step of function what should happen by use state values []
 //create use states for each input field title, created by etc
+import { CenterFocusStrong } from "@mui/icons-material";
+import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -37,20 +39,28 @@ const handleForm = (e) => {
 
     <div>
     <section>
-      <form onSubmit={handleForm} className="idea">
-        <label >Title:
+      
+      <form onSubmit={handleForm} className="createIdeaCard" >
+        <label className="formLabels">Title:
+        <br/>
           <input onChange={(e)=>setTitle(e.target.value)} type="text"/>
         </label>
-        <label>Idea by:
+        <label className="formLabels">Idea by:
+        <br/>
           <input onChange={(e)=>setCreatedBy(e.target.value)} type="text"/>
         </label>
-        <label>Description:
-          <input onChange={(e)=>setDescription(e.target.value)} type="text"/>
+        <br/>
+        <label className="formLabels">Description:
+        <br/>
+          <TextField onChange={(e)=>setDescription(e.target.value)} type="text"/>
         </label>
-        <label>Looking for:
-          <input onChange={(e)=>setLookingFor(e.target.value)} type="text"/>
+        <br/>
+        <label className="formLabels">Looking for:
+        <br/>
+          <TextField onChange={(e)=>setLookingFor(e.target.value)} type="text"/>
         </label>
-        <input type="submit" value="Submit" />
+        <br/>
+        <input className= "create-button" type="submit" value="Submit" />
       </form>
     </section>
     </div>

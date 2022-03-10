@@ -1,20 +1,18 @@
 * {
-  color: rgb(123, 38, 233);
+  color: rgb(11, 67, 77);
+  font-weight: 900;
 }
 
 .navbar {
-  color: orange;
   padding: 20px;
   display: flex;
   align-items: center;
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  border-bottom: 1px solid #000000;
 }
 
 .menu a {
-  color: #7499df solid;
   margin-left: 100px;
   text-decoration: none;
   padding: 6px;
@@ -22,15 +20,14 @@
 
 .ideaboard {
   /* display: flex; */
-  width: 600px;
+  width: 700px;
   height: 450px;
   position: relative;
   background-color: #ffffff;
   align-items: center;
   margin: 30px auto;
   border-radius: 1rem;
-  border: rgb(130, 128, 233);
-  outline: #7499df solid 10px;
+    outline: #606a7c solid 2px;
   padding: 20px;
   text-align: center;
   overflow-y: auto;
@@ -38,18 +35,36 @@
   align-items: center;
   flex-direction: column;
   flex-flow: wrap-reverse;
-  column-gap: 10;
+  background-color: antiquewhite;
 }
 
-.idea {
-  width: 600px;
+.createIdeaCard{
+  width: 300px;
   position: relative;
-  background-color: #ffffff;
-  align-items: center;
-  margin: 30px auto;
-  border: 3px solid darkgray;
-  border-radius: 1rem;
+  padding: 130px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
+
+.MuiCardHeader-title{
+  font-weight: 900;
+  color: antiquewhite;
+}
+
+.css-1qvr50w-MuiTypography-root{
+  font-weight: 900;
+}
+
+.formLabels{
+font-size: 20px;
+color: rgb(236, 165, 99);
+font-weight: lighter;
+display: contents;
+}
+  
+  
+
 
 .container {
   display: flex;
@@ -57,7 +72,7 @@
   margin: auto;
 }
 .h1 {
-  color: rgb(130, 128, 233);
+  color: rgb(119, 117, 235);
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -65,7 +80,7 @@
 }
 
 .card h3 {
-  color: rgb(206, 117, 179);
+  color: rgb(241, 140, 140);
   font-family: sans-serif;
   font-weight: 400;
 }
@@ -86,7 +101,7 @@
 }
 
 .card-button:hover{
-  background-color: coral;
+  background-color: rgb(149, 130, 123);
 
 }
 
@@ -107,4 +122,9 @@
   left: 800px;
   color: #ffffff;
 
+}
+
+.invite{
+  margin-top: 137px;
+  margin-left: 472px;
 }
