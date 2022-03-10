@@ -5,13 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { brown, pink } from "@mui/material/colors";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
-import { Style } from "@mui/icons-material";
 
 export default function IdeaCard(props) {
   const [expanded, setExpanded] = React.useState(false);
@@ -32,6 +28,7 @@ export default function IdeaCard(props) {
             <h3>Description:</h3> <h5>{props.idea.description}</h5>
             <h3>Looking for </h3>
             <h5>{props.idea.lookingFor}</h5>
+          
             <br />
             <container>
               <Link to={`/invite/${props.idea.id}`} >

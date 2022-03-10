@@ -1,11 +1,15 @@
 import Navbar from "./Navbar";
-import Welcome from "./Welcome";
+
 import Board from "./scenes/Board";
 import Create from "./scenes/Create";
 import Invite from "./scenes/Invite";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useState } from "react";
+import Login from './scenes/components/Login'
 
 function App() {
+  const[user,setUser]= useState()
+
   return (
     <Router>
       <div className="App">
@@ -13,7 +17,7 @@ function App() {
         <div className="content"></div>
         <Switch>
           <Route path="/welcome">
-            <Welcome />
+            <Login user={user} setUser={setUser} />
           </Route>
         </Switch>
         <Switch>
@@ -31,6 +35,8 @@ function App() {
             <Invite/>
           </Route>
         </Switch>
+        
+       
       </div>
     </Router>
   );

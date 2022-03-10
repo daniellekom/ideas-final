@@ -1,5 +1,5 @@
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
   return (
     <nav className="navbar">
       <h2>BABY GENIUS</h2>
@@ -14,7 +14,7 @@ style={{
 }}>       
      
         <a href="/Board">Board</a>
-        <a href="/Welcome">Logout</a>
+       {user ? (<a href="/Welcome">Logout</a>) :(<a href="/Welcome">Login</a>)}
        
       </div >
     </nav>
