@@ -6,14 +6,14 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import { app } from "../../ConnectAuth";
+
 
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
   const provider = new GoogleAuthProvider();
-  const auth = getAuth(app);
+  const auth = getAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,7 +48,6 @@ export default function Login({ setUser, user }) {
   const handleGoogleLogin = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        setUser(result.user);
         localStorage.setItem("displayName", result.user.displayName);
         localStorage.setItem("profilePhoto", result.user.photoURL);
         console.log("this is my result", result.user.displayName);
@@ -58,39 +57,11 @@ export default function Login({ setUser, user }) {
   };
   console.log("Here is my user from my parent app", user);
   return (
-    <>
-      <h1>Login</h1>
-      <hr />
-      <form onSubmit={handleFormSubmit}>
-        <label>
-          Email:
-          <input
-            placeholder="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            placeholder="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <input onClick={handleSubmit} type="submit" value="login" />
-      </form>
+   <>
       <button className="google-signin" onClick={handleGoogleLogin}>
         Sign in with Google
       </button>
-      <br />
-      <p>
-        Not a user?<Link to="/signup">Sign up</Link>
-      </p>
+    
     </>
   );
 }

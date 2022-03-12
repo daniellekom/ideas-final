@@ -12,7 +12,11 @@ export default function Board() {
     fetch("https://walky-ideas.uk.r.appspot.com/ideas")
       // fetch("http://localhost:3001/ideas")
       .then((response) => response.json())
-      .then((data) => setIdeas(data.ideas))
+
+      //sort in order by checking network in inspect
+      .then((data) => setIdeas(data.ideas.sort((a,b) => {
+        return b.dateCreated?._seconds-a.dateCreated?._seconds
+      })))
       .catch(alert);
   }, []);
 
@@ -28,6 +32,7 @@ export default function Board() {
             </>
           );
         })}
+        
       </section>
       <Link to="/create">
         <Fab aria-label="add">
