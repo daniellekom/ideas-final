@@ -58,10 +58,15 @@ export default function Login({ setUser, user }) {
   console.log("Here is my user from my parent app", user);
   return (
    <>
+   <section className="WelcomeBg">
+     <h1>Welcome to Baby Genius</h1>
+
+
       <button className="google-signin" onClick={handleGoogleLogin}>
         Sign in with Google
       </button>
     
+   </section>
     </>
   );
 }

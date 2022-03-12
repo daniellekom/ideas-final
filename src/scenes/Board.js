@@ -20,6 +20,7 @@ export default function Board() {
       .catch(alert);
   }, []);
 
+
   return (
     <div className="container">
       <h1 className="h1"> IDEA BOARD</h1>
@@ -33,9 +34,16 @@ export default function Board() {
           );
         })}
         
+        
       </section>
       <Link to="/create">
-        <Fab aria-label="add">
+        <Fab sx={{
+          bgcolor: 'white',
+          boxShadow: 1,
+          borderRadius: 10,
+          minHeight:60,
+          minWidth: 60,
+        }} size="large" aria-label="add">
           <AddIcon />
         </Fab>
       </Link>

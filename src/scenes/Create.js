@@ -40,17 +40,18 @@ const handleForm = (e) => {
 
   return (
 
-    <div>
+    <div className="createbcknd">
     <section>
-      
       <form onSubmit={handleForm} className="createIdeaCard" >
+        <h2 >CREATE YOUR IDEA!</h2>
+        <br/>
         <label className="formLabels">Title:
         <br/>
-          <input onChange={(e)=>setTitle(e.target.value)} type="text"/>
+          <TextField onChange={(e)=>setTitle(e.target.value)} type="text"/>
         </label>
         <label className="formLabels">Idea by:
         <br/>
-          <input onChange={(e)=>setCreatedBy(e.target.value)} type="text"/>
+          <TextField onChange={(e)=>setCreatedBy(e.target.value)} type="text"/>
         </label>
         <br/>
         <label className="formLabels">Description:
@@ -60,7 +61,7 @@ const handleForm = (e) => {
         <br/>
         <label className="formLabels">Looking for:
         <br/>
-          <TextField onChange={(e)=>setLookingFor(e.target.value)} type="text"/>
+          <TextField  onChange={(e)=>setLookingFor(e.target.value)} type="text"/>
         </label>
         <br/>
         {/* <label className="formLabels">Email:
