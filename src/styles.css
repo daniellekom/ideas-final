@@ -66,8 +66,8 @@
 
 .createIdeaCard h2{
   color: white;
- margin-top: -78px;
-    padding: 21px;
+  margin-top: -103px;
+  padding: 24px;
 }
 
 .MuiCardHeader-title{
@@ -76,9 +76,9 @@
 }
 
 .css-1qvr50w-MuiTypography-root{
-  color: rgb(6, 22, 95);
+  color: rgb(6, 95, 68);
   text-decoration-line: underline;
-  text-decoration-color: rgb(236, 165, 99);
+  text-decoration-color: rgb(10, 61, 36);
   text-underline-offset: 5px;
   
 }
@@ -270,16 +270,17 @@ display: contents;
   .WelcomeBg h1{
     font-size: 50px;
     margin-bottom: -137px;
-    padding: 247px;
+    padding: 236px;
     color: rgb(255, 255, 255);
   }
 
   .invite{
     background-color: tomato;
-    padding: 2em;
-    margin-top: -6px;
-    margin-left: 15px;
-    margin-right: 22px;
-    border-radius: 1rem;
+    padding: 1em;
+    margin-top: 96px;
+    margin-right: auto;
+    border-radius: 9rem;
+    margin-left: auto;
+    display: block; 
 
   }

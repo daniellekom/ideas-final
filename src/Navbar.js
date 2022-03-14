@@ -6,11 +6,20 @@ import { app } from "./ConnectAuth";
 const Navbar = ({ user }) => {
   const auth = getAuth(app);
   const history = useHistory();
-  const [isWelcomeScreen] = useState(false);
-  const[isBoardScreen] = useState(false)
+  //dont need isWelcomeScreen because in app.js we added navbar in seperate components
+  // const [isWelcomeScreen, setIsWelcomeScreen] = useState(false);
+  const[isBoardScreen, setIsBoardScreen] = useState(false)
+
+  // useEffect(() => {
+  //   if (history.location.pathname === "/Welcome") {
+  //     setIsWelcomeScreen(true)
+  //   }
+  
+  // }, [history]);
 
   useEffect(() => {
-    if (history.location.pathname === "/Welcome") {
+    if (history.location.pathname === "/Board")  {
+      setIsBoardScreen(true)
     }
   }, [history]);
 
@@ -21,7 +30,7 @@ const Navbar = ({ user }) => {
 
   return (
     <nav className="navbar">
-      <h2>BABY GENIUS</h2>
+      <h2>Dream Board</h2>
       <div
         className="menu"
         style={{
@@ -32,25 +41,22 @@ const Navbar = ({ user }) => {
           borderRadius: "1rem",
         }}
       >
-
-        {!isWelcomeScreen && (
+       
+        {!isBoardScreen && (
           <>
             <a className="boardIcon" href="/Board">
               Board
             </a>
-            {user 
-            ? ("") 
-            : (
-              // ? <button onClick={() => onSignout()} href="/Welcome">Logout</button>
+ 
+          </>
+        )}
               <button
                 className="logoutbutton"
                 onClick={() => history.push("/Welcome")}
               >
                 Logout
               </button>
-            )}
-          </>
-        )}
+
       </div>
     </nav>
   );

@@ -59,7 +59,7 @@ export default function Login({ setUser, user }) {
   return (
    <>
    <section className="WelcomeBg">
-     <h1>Welcome to Baby Genius</h1>
+     <h1>Welcome to Dream Board</h1>
 
 
       <button className="google-signin" onClick={handleGoogleLogin}>
