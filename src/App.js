@@ -5,49 +5,41 @@ import Create from "./scenes/Create";
 import Invite from "./scenes/Invite";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState } from "react";
-import Login from './scenes/components/Welcome'
+import Login from "./scenes/components/Welcome";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function App() {
-  const[user,setUser]= useState();
+  const [user, setUser] = useState();
   const auth = getAuth();
 
   onAuthStateChanged(auth, (u) => {
-    console.log(u)
+    console.log(u);
     setUser(u);
-  })
+  });
 
   return (
     //putting navbar right under app will display on every screen
     <Router>
-      <div className="App">   
+      <div className="App">
         {/* <Navbar user={user}/> */}
         <div className="content"></div>
         <Switch>
-          <Route path="/welcome">
+          <Route exact path="/" >
             <Login user={user} setUser={setUser} />
-          </Route>
-        </Switch>
-        <Switch>
-          <Route path="/board" >
-            <Navbar/>
+            </Route>
+          <Route path="/board">
+            <Navbar shouldHideBoardButton={true} />
             <Board />
           </Route>
-        </Switch>
-        <Switch>
           <Route path="/create">
-            <Navbar/>
+            <Navbar shouldHideBoardButton={false}/>
             <Create user={user} />
           </Route>
-        </Switch>
-        <Switch>
-          <Route path= "/invite/:id">
-            <Navbar/>
-            <Invite/>
+          <Route path="/invite/:id">
+            <Navbar shouldHideBoardButton={false} />
+            <Invite />
           </Route>
         </Switch>
-        
-       
       </div>
     </Router>
   );

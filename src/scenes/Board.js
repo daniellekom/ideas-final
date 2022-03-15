@@ -22,9 +22,10 @@ export default function Board() {
 
 
   return (
-    <div className="container">
+    <div className="container" style={{ backgroundImage: "url(https://i.pinimg.com/originals/4b/b1/8f/4bb18f46bf73bd4aa9159efe7cea5512.jpg)"
+  }}>
       <h1 className="h1"> IDEA BOARD</h1>
-      <section className="ideaboard">
+      <section className="ideaboard" >
         {ideas.map((idea) => {
           console.log(idea);
           return (
@@ -38,7 +39,7 @@ export default function Board() {
       </section>
       <Link to="/create">
         <Fab sx={{
-          bgcolor: 'white',
+          bgcolor: '#e60073',
           boxShadow: 1,
           borderRadius: 10,
           minHeight:60,

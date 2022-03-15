@@ -12,7 +12,7 @@ const Create = ({user}) => {
   const [createdBy, setCreatedBy]=useState("")
   const [description,setDescription]=useState("")
   const [lookingFor,setLookingFor]=useState("")
- 
+ const [date, setDate]=useState()
 
 
 

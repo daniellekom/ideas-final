@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 
 
+
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -58,8 +59,8 @@ export default function Login({ setUser, user }) {
   console.log("Here is my user from my parent app", user);
   return (
    <>
-   <section className="WelcomeBg">
-     <h1>Welcome to Dream Board</h1>
+   <section className="WelcomeBg" >
+     <h1 className="glow">Welcome to Dream Board</h1>
 
 
       <button className="google-signin" onClick={handleGoogleLogin}>

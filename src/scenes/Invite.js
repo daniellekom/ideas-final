@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 
 const Invite = () => {
   // get id for each invite example OnU7ckbAVoVdJhVCQmP2
@@ -18,10 +21,16 @@ const Invite = () => {
  
 
   return (
-    <div className="invite">
-      <h3> Email {idea?.createdBy} to Collab!</h3>
+
+    
+    <section className="WelcomeBg" style={{  backgroundImage: "url(https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ5fHxuZW9uJTIwYmFja2dyb3VuZCUyMGJyaWNrd2FsbHN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60)"}}>
+     <div className="invite" >
+       <div className="inviteText">
+      <h3>Email {idea?.createdBy} to Collaborate!</h3>
       <h5>Their email: {idea?.email}</h5>
-    </div>
+     </div>
+     </div>
+    </section>
   );
 };
 

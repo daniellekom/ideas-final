@@ -27,6 +27,8 @@ export default function IdeaCard(props) {
                 <h3>Description</h3> <p>{props.idea.description}</p> 
                 <h3>Looking for </h3>< h5>{props.idea.lookingFor}</h5>
                 <h3>Your email</h3> <h5>{props.idea.email}</h5>
+                {/* <h3>Your email!!</h3> <h5>{props.idea.dateCreated}</h5> */}
+          
               <container>
               <hr/> <br/>
                 <Link to={`/invite/${props.idea.id}`}>

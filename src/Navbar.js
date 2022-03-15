@@ -3,30 +3,30 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { app } from "./ConnectAuth";
 
-const Navbar = ({ user }) => {
+const Navbar = ({ shouldHideBoardButton }) => {
   const auth = getAuth(app);
   const history = useHistory();
-  //dont need isWelcomeScreen because in app.js we added navbar in seperate components
-  // const [isWelcomeScreen, setIsWelcomeScreen] = useState(false);
-  const[isBoardScreen, setIsBoardScreen] = useState(false)
+  const[isBoardScreen, setIsBoardScreen] = useState(false);
+  // dont need isWelcomeScreen because in app.js we added navbar in seperate components
+  const [isWelcomeScreen, setIsWelcomeScreen] = useState(false);
 
-  // useEffect(() => {
-  //   if (history.location.pathname === "/Welcome") {
-  //     setIsWelcomeScreen(true)
-  //   }
+  useEffect(() => {
+    if (history.location.pathname === "/Welcome") {
+      setIsWelcomeScreen(true)
+    }
   
-  // }, [history]);
+  }, [history]);
 
   useEffect(() => {
     if (history.location.pathname === "/Board")  {
       setIsBoardScreen(true)
     }
+    else{
+      setIsBoardScreen(false)
+    }
   }, [history]);
 
-  const onSignout = () => {
-    signOut(auth);
-    history.push("/Welcome");
-  };
+ 
 
   return (
     <nav className="navbar">
@@ -42,7 +42,7 @@ const Navbar = ({ user }) => {
         }}
       >
        
-        {!isBoardScreen && (
+        {!shouldHideBoardButton && (
           <>
             <a className="boardIcon" href="/Board">
               Board
@@ -52,7 +52,7 @@ const Navbar = ({ user }) => {
         )}
               <button
                 className="logoutbutton"
-                onClick={() => history.push("/Welcome")}
+                onClick={() => history.push("/")}
               >
                 Logout
               </button>

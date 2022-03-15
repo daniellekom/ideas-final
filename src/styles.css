@@ -1,15 +1,22 @@
 * {
-  color: rgb(37, 73, 71);
+  color: rgb(255, 255, 255);
   font-weight: 900;
 }
 
 .navbar {
-  padding: 33px;
+ 
+  padding: 19px;
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 863px;
+  max-width: 750px;
+  margin-right: 168px;
+  margin-left:201px;
   margin: auto;
+  background-color: #27282740;
+  border-radius: 1rem;
+  margin-top: 30px;
+  border: 1px solid #aaaaaa;
 }
 
 .menu a {
@@ -17,9 +24,9 @@
   text-decoration: none;
   padding: 6px;
 }
-
+/* 
 .ideaboard {
-  /* display: flex; */
+
   width: 700px;
   height: 450px;
   position: relative;
@@ -33,7 +40,25 @@
   align-items: center;
   flex-direction: column;
   flex-flow: wrap-reverse;
-  background-color:tomato;
+  background-color:#4d584980
+} */
+
+.ideaboard {
+  width: 750px;
+  height: 450px;
+  position: relative;
+  margin: 10px auto;
+  border-radius: 1rem;
+  margin-left: -20px;
+  /* padding: 20px; */
+  text-align: center;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: wrap-reverse;
+  background-color: #00000026;
+  border: 1px solid #aaaaaa;
 }
 
 .ideaCard {
@@ -42,12 +67,11 @@
 }
 
 .createbcknd{
-  background-color: tomato;
-  padding: 2em;
-  margin-top: -6px;
-  margin-left: 15px;
-  margin-right: 22px;
-  border-radius: 1rem;
+  background-image: url("https://www.plethoradesign.com/wp-content/uploads/2022/02/iStock-1300878229.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ 
 }
 
 .createIdeaCard{
@@ -91,19 +115,23 @@ display: contents;
 }
   
 .container {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  margin-top: -167px;
+  padding: 222px;
 }
 
 .h1 {
-  color: rgb (83, 80, 211);
+  color: white;
   display: flex;
-  flex-direction: column;
-  margin: auto;
-  font-weight: 900;
+  margin: top;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
 }
-
 
 .card h2 {
   color: #aaaaaa;
@@ -164,14 +192,14 @@ display: contents;
 .card-button {
   border-radius: 1em;
   color: #1f497d;
-  background-color: #39353f00;
+  background-color: #f0c7ec;
   border: 3px solid rgb(31 73 125);
   padding: 6px 52px;
   margin: -55rem auto 5%;
 }
 
 .card-button:hover {
-  background-color: white;
+  background-color: #a75c9f;
   border: 2px solid white;
   color: rgb(12, 78, 184);
   box-shadow: 10px 5px 5px #00000030;
@@ -180,7 +208,7 @@ display: contents;
 .btn {
   position: relative;
   align-items: center;
-  background-color: #749fe4;
+  background-color: #ffffff;
   justify-content: center;
   border: 3px solid darkgray;
   color: #ffffff;
@@ -209,8 +237,8 @@ display: contents;
 }
 
 .MuiButtonBase-root {
-  top: -509px;
-  left: 876px;
+  top: -450px;
+  left: 653px
 
 }
 
@@ -234,24 +262,130 @@ display: contents;
 }
 
 .boardIcon:hover{
-  color: tomato;
+  color: #c720ba;
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #c9c9ff, 0 0 50px #40c3b7, 0 0 60px #c720ba, 0 0 70px #e60073;
 }
 
 .google-signin{
-  margin-top: -25px;
-  border-color: black;
-  background-color: white;
-  padding: 6px;
-  width: 236px;
+  border: 2px solid white;
+  border-radius: 2rem;
+  position: relative;
+  width: 410px;
+  margin-left:367px;
+  height: 50px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  background:  none;
+  /* opacity: 0;
+  transition: 0.5s;
+  animation: animate 20s linear infinite; */
 }
-.google-signin:hover{
-  color:white;
-  background-color: tomato;
 
+.google-signin:hover{
+  background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c9c9ff, #40c3b7, rgb(238, 175, 210) );
+
+  border: 2px solid #ffffdd;
+  color: #fbffff;
+  box-shadow: 10px 5px 5px #00000030;
 }
+/* .google-signin::before {
+  border: 2px solid white;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba);
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 20s linear infinite;
+}
+
+.google-signin:after {
+  border: 2px solid white;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba);
+  background-size: 400%;
+  opacity: 0;
+  filter: blur(5px);
+  transition: 0.5s;
+  animation: animate 20s linear infinite;
+} */
+
+/* 
+.google-signin:hover::before,
+.google-signin:hover::after{
+
+  opacity: 1;
+  }
+  @keyframes animate
+  {
+      0%
+      {
+          background-position: 0 0;
+      }
+      50%
+      {
+          background-position: 400% 0;
+      }
+      100%
+      {
+          background-position: 0 0,
+      }
+  }
+ 
+ 
+  .google-signin span {
+      position: absolute;
+      display: block;
+      top: 1px;
+      left: 1px;
+      right: 1px;
+      bottom: 1px;
+      text-align: center;
+      background: #0c0c0c;
+      color: rgba(255,255,255,0.2);
+      transition: 0.5s;
+      z-index: 1;
+ 
+  }
+  .google-signin:hover span {
+  color:white;
+  }
+  .google-signin span::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(255,255,255,0.1);
+ 
+  } */
+
+
 .logoutbutton{
   padding: 4px;
   width: 131px;
+ border-radius:1rem;
  border:none;
   color:black;
   background-color: white;
@@ -259,28 +393,56 @@ display: contents;
 
   .logoutbutton:hover{
     color: white;
-    background-color: tomato;
+    background-color: #fdb4f6;
     border-radius: 2rem;
+    border:none
   }
 
   .WelcomeBg{
-    background-color: tomato;
+    background-image: url("https://www.plethoradesign.com/wp-content/uploads/2022/02/iStock-1300878229.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   .WelcomeBg h1{
     font-size: 50px;
-    margin-bottom: -137px;
+    margin-bottom: -50px;
+    margin-top: -50px;
     padding: 236px;
     color: rgb(255, 255, 255);
   }
 
   .invite{
-    background-color: tomato;
-    padding: 1em;
-    margin-top: 96px;
-    margin-right: auto;
-    border-radius: 9rem;
-    margin-left: auto;
-    display: block; 
-
+    background-image: url();
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 2000px;
+    margin-top: -245px;
+    
   }
+
+  .inviteText{
+    /* background-color: black; */
+  }
+
+  .invite h3{
+    margin-left: -433px;
+    padding: 405px;
+  
+  }
+
+  .invite h5{
+    margin-left: -77px;
+    padding: 31px;
+    margin-top: -430px;
+}
+  
+
+
+
+
+
+
+
