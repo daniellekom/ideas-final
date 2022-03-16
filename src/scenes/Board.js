@@ -39,7 +39,7 @@ export default function Board() {
       </section>
       <Link to="/create">
         <Fab sx={{
-          bgcolor: '#e60073',
+          bgcolor: '#d7abf5df',
           boxShadow: 1,
           borderRadius: 10,
           minHeight:60,

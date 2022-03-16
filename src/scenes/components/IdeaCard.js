@@ -15,7 +15,7 @@ export default function IdeaCard(props) {
     setExpanded(!expanded);
   };
   return (
-    <Card sx={{ width: 500, margin: "auto", marginTop: 5, borderRadius: 4 }}>
+    <Card sx={{ width: 475, margin: "auto", marginTop: 3, borderRadius: 2 }}>
       <div className="ideaCard">
         <CardHeader MuiCardHeader-title title={props.idea.createdBy} />
         <CardMedia height="120" />
@@ -32,7 +32,7 @@ export default function IdeaCard(props) {
               <container>
               <hr/> <br/>
                 <Link to={`/invite/${props.idea.id}`}>
-                  <button className="card-button">COLLAB</button>
+                  <button className="dreamButton">COLLAB</button>
                 </Link>
               </container>
             </div>

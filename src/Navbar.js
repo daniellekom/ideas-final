@@ -30,7 +30,7 @@ const Navbar = ({ shouldHideBoardButton }) => {
 
   return (
     <nav className="navbar">
-      <h2>Dream Board</h2>
+      <h2 className="glow">Dream Board</h2>
       <div
         className="menu"
         style={{
@@ -51,7 +51,7 @@ const Navbar = ({ shouldHideBoardButton }) => {
           </>
         )}
               <button
-                className="logoutbutton"
+                className="dreamButton"
                 onClick={() => history.push("/")}
               >
                 Logout

@@ -39,15 +39,20 @@ const handleForm = (e) => {
 
 
   return (
+    
+
 
     <div className="createbcknd">
+      <h1 className="h1"> Create an Idea </h1>
+      <br/>
+      
+      <h3>"The way to get started is to quit talking and start doing" </h3>
     <section>
       <form onSubmit={handleForm} className="createIdeaCard" >
-        <h2 >CREATE YOUR IDEA!</h2>
-        <br/>
         <label className="formLabels">Title:
         <br/>
           <TextField onChange={(e)=>setTitle(e.target.value)} type="text"/>
+          <br/>
         </label>
         <label className="formLabels">Idea by:
         <br/>
