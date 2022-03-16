@@ -23,8 +23,8 @@ export default function Board() {
 
   return (
     <div className="container" style={{ backgroundImage: "url(https://i.pinimg.com/originals/4b/b1/8f/4bb18f46bf73bd4aa9159efe7cea5512.jpg)"
-  }}>
-      <h1 className="h1"> IDEA BOARD</h1>
+  }}>   
+     <center> <h1 className="h1"> Explore All Dreams </h1></center>
       <section className="ideaboard" >
         {ideas.map((idea) => {
           console.log(idea);

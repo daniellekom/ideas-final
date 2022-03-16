@@ -37,6 +37,7 @@
   height: 450px;
   position: relative;
   margin: 10px auto;
+  margin-top:30px;
   border-radius: 1rem;
   margin-left: -20px;
   /* padding: 20px; */
@@ -46,12 +47,12 @@
   align-items: center;
   flex-direction: column;
   flex-flow: wrap-reverse;
-  border: 1px solid #ffffdd;
+ 
   
 }
 
 .ideaCard {
-  background:#fdfdf4;
+  background:#f2e9fa;
   margin: "auto"; 
 }
 
@@ -104,6 +105,29 @@
   border-radius: 2rem;
   border: 2px solid #ffffdd;
   }
+  
+  .create-button1{
+    padding: 4px;
+    border:none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    border: 2px solid rgb(176, 66, 161);
+    border-radius: 2rem;
+    background: none;
+    color: rgb(176, 66, 161);
+    width: 10rem;
+
+  }
+
+  .create-button1:hover{
+    color: white;
+    background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c9c9ff, #40c3b7, rgb(238, 175, 210) );
+    border-radius: 2rem;
+    border: 2px solid #ffffdd;
+    width: 10rem;
+    }
 
 
 .createIdeaCard h2{
@@ -138,22 +162,24 @@
 
 .h1 {
   color: white;
-  background-color: #00000030;
   display: flex;
-  text-transform: uppercase;
   margin: top;
   margin-top: 20px;
-  font-weight: 300;
+  font-weight: 800;
   font-size: 2rem;
-  letter-spacing: 1rem;
+  letter-spacing: 3px;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-around;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px;
+  text-decoration-color: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #c9c9ff, 0 0 50px #40c3b7, 0 0 60px #c720ba, 0 0 70px #e60073;
 }
 
 .card h2 {
-  color: #aaaaaa;
+  color: #000000;
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -162,7 +188,7 @@
   margin-bottom: 5px;
 }
 .card h3 {
-  color: #aaaaaa;
+  color: #b042a1;
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -172,8 +198,8 @@
 }
 
 .card p {
-  background-color: #ffffff30;
-  color: rgb(8, 10, 124);
+  background-color: #aaaaaa42;
+  color: rgb(0, 0, 0);
   padding: 20px;
   font-size: 14px;
   font-weight: 300;
@@ -185,7 +211,7 @@
   border-radius: 5px;
 }
 .card h4 {
-  color: rgb(6, 15, 100);
+  color: rgb(4 4 4);
   font-size: 16px;
   font-weight: thinner;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -193,8 +219,8 @@
   margin-bottom: 5%;
 }
 .card h5 {
-  background-color: #ffffff30;
-  color: rgb(16, 17, 95);
+  background-color: #aaaaaa42;
+  color: rgb(0, 0, 0);
   padding-top: 3%;
   padding-bottom: 2%;
   padding-left: 20px;
@@ -256,8 +282,9 @@
 }
 
 .MuiButtonBase-root {
-  top: -450px;
-  left: 653px
+  top: -465px;
+  left: 667px;
+ 
 
 }
 
@@ -291,6 +318,12 @@
   animation: glow 1s ease-in-out infinite alternate;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #c9c9ff, 0 0 50px #40c3b7, 0 0 60px #c720ba, 0 0 70px #e60073;
 }
+.bottom-line-glow {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  animation: glow 1s ease-in-out infinite alternate;
+  -webkit-box-shadow: 0 10px 20px -6px  #40c3b7;
+	        box-shadow: 0 13px 20px -6px #e04894;
+}
 
 .google-signin{
   border: 2px solid white;
@@ -318,91 +351,6 @@
   color: #fbffff;
   box-shadow: 10px 5px 5px #00000030;
 }
-/* .google-signin::before {
-  border: 2px solid white;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 2rem;
-  background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba);
-  background-size: 400%;
-  opacity: 0;
-  transition: 0.5s;
-  animation: animate 20s linear infinite;
-}
-
-.google-signin:after {
-  border: 2px solid white;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 2rem;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg,#c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c720ba);
-  background-size: 400%;
-  opacity: 0;
-  filter: blur(5px);
-  transition: 0.5s;
-  animation: animate 20s linear infinite;
-} */
-
-/* 
-.google-signin:hover::before,
-.google-signin:hover::after{
-
-  opacity: 1;
-  }
-  @keyframes animate
-  {
-      0%
-      {
-          background-position: 0 0;
-      }
-      50%
-      {
-          background-position: 400% 0;
-      }
-      100%
-      {
-          background-position: 0 0,
-      }
-  }
- 
- 
-  .google-signin span {
-      position: absolute;
-      display: block;
-      top: 1px;
-      left: 1px;
-      right: 1px;
-      bottom: 1px;
-      text-align: center;
-      background: #0c0c0c;
-      color: rgba(255,255,255,0.2);
-      transition: 0.5s;
-      z-index: 1;
- 
-  }
-  .google-signin:hover span {
-  color:white;
-  }
-  .google-signin span::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: rgba(255,255,255,0.1);
- 
-  } */
-
 
 .dreamButton{
   padding: 4px;
@@ -467,8 +415,68 @@
   
 
 
+.neonText {
+font-family: 'Montserrat', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;  
+background: #000;
+min-height: 100vh;
+}
 
+.neon-h1 {
+--neon-text-color: #f40;
+--neon-border-color: #08f;
+font-size: 2rem;
+font-weight: 200;
+color: #fff;
+padding: .4rem .6rem .55rem;
+border: none;
+animation: neon 1.5s infinite alternate;  
+text-align: center;   
+}
 
+.neon-h1::-moz-selection {
+background-color: var(--neon-border-color);
+color: var(--neon-text-color);
+}
+
+.neon-h1::selection {
+background-color: var(--neon-border-color);
+color: var(--neon-text-color);
+}
+
+.neon-h1:focus {
+outline: none;
+}
+
+@keyframes neon {
+    
+100% {
+    
+      text-shadow:
+          -0.2rem -0.2rem 1rem #fff,
+          0.2rem 0.2rem 1rem #fff,
+          0 0 2rem var(--neon-text-color),
+          0 0 4rem var(--neon-text-color),
+          0 0 6rem var(--neon-text-color),
+          0 0 8rem var(--neon-text-color),
+          0 0 10rem var(--neon-text-color);
+      
+      box-shadow:
+          0 0 .5rem #fff,
+          inset 0 0 .5rem #fff,
+          0 0 2rem var(--neon-border-color),
+          inset 0 0 2rem var(--neon-border-color),
+          0 0 4rem var(--neon-border-color),
+          inset 0 0 4rem var(--neon-border-color);        
+  }
+  
+ 55% {        
+      text-shadow: none;
+      box-shadow: none;
+  }    
+}
 
 
 
