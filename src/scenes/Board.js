@@ -28,6 +28,9 @@ export default function Board() {
       <section className="ideaboard" >
         {ideas.map((idea) => {
           console.log(idea);
+          
+          
+          
           return (
             <>
               <IdeaCard idea={idea} />

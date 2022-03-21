@@ -60,13 +60,12 @@ export default function Login({ setUser, user }) {
   return (
    <>
    <section className="WelcomeBg" >
-     <h1 className="glow">Welcome to Dream Board</h1>
-
-
-      <button className="google-signin" onClick={handleGoogleLogin}>
-        Sign in with Google
-      </button>
-    
+     <div className="welcome-container">
+      <h1 className="glow">Welcome to Dream Board</h1>
+        <button className="google-signin" onClick={handleGoogleLogin}>
+          Sign in with Google
+        </button>
+      </div>
    </section>
     </>
   );

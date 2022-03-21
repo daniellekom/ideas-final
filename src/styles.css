@@ -5,7 +5,6 @@
 }
 
 .navbar {
- 
   padding: 19px;
   display: flex;
   align-items: center;
@@ -14,11 +13,10 @@
   margin-right: 168px;
   margin-left:201px;
   margin: auto;
-  background-color: #ffffff20;
-  /* background-color: #27282740; */
+  background-color: #ffffff20; 
   border-radius: 10px;
   margin-top: 30px;
-  /* border: 1px solid #ffffdd; */
+  z-index: 10;
 }
 
 /* to adjust the hover effect, effect boardicon */
@@ -34,21 +32,18 @@
 
 .ideaboard {
   width: 750px;
-  height: 450px;
+  /* height: 450px; */
+  height: 80vh;
   position: relative;
   margin: 10px auto;
-  margin-top:30px;
+  /* margin-top:30px; */
   border-radius: 1rem;
-  margin-left: -20px;
-  /* padding: 20px; */
   text-align: center;
   overflow-y: auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-flow: wrap-reverse;
- 
-  
+  flex-flow: wrap-reverse;  
 }
 
 .ideaCard {
@@ -72,7 +67,6 @@
   animation: glow 1s ease-in-out infinite alternate;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #c9c9ff, 0 0 50px #40c3b7, 0 0 60px #c720ba, 0 0 70px #e60073;
 }
-
 
 .createIdeaCard{
   width: 475px;
@@ -262,30 +256,15 @@
   margin: -6rem auto 5%;
 }
 
-.login {
-  width: 55mm;
-  margin: auto;
-  margin-top: 140px;
-  
-}
+
+
 .google-signin {
-  width: 55mm;
-  margin: 452px;
-  margin-top: 10px
-}
-
-.google-signin-p {
-  width: 55mm;
-  margin: 470px;
-  margin-top: -434px
-
+margin-top: 20em;
 }
 
 .MuiButtonBase-root {
-  top: -465px;
-  left: 667px;
- 
-
+  top: -640px;
+  left: 643px;
 }
 
 
@@ -299,8 +278,6 @@
   margin-top: 137px;
   margin-left: 472px;
 }
-
-
 
 .boardIcon{
   color: black;
@@ -328,10 +305,10 @@
 .google-signin{
   border: 2px solid white;
   border-radius: 2rem;
-  position: relative;
+  /* position: relative; */
   width: 410px;
-  margin-left:367px;
-  height: 50px;
+  /* margin-left:367px; */
+  /* height: 50px; */
   line-height: 48px;
   text-transform: uppercase;
   font-size: 13px;
@@ -365,54 +342,67 @@
   background: none;
   }
 
-  .dreamButton:hover{
-    color: white;
-    background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c9c9ff, #40c3b7, rgb(238, 175, 210) );
-    border-radius: 2rem;
-    border: 2px solid #ffffdd;
+.dreamButton:hover{
+  color: white;
+  background: linear-gradient(45deg, #c9c9ff, #40c3b7, rgb(238, 175, 210), #c9c9ff, #40c3b7, rgb(238, 175, 210) );
+  border-radius: 2rem;
+  border: 2px solid #ffffdd;
   }
 
-  .WelcomeBg{
-    background-image: url("https://www.plethoradesign.com/wp-content/uploads/2022/02/iStock-1300878229.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.WelcomeBg{
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.plethoradesign.com/wp-content/uploads/2022/02/iStock-1300878229.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   }
 
   .WelcomeBg h1{
+    color: #fff;
     font-size: 50px;
-    margin-bottom: -50px;
-    margin-top: -50px;
-    padding: 236px;
-    color: rgb(255, 255, 255);
   }
 
-  .invite{
-    background-image: url();
+  .welcome-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+
+  .inviteElement {
+    margin-top: -114px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .CollabBg {
+    width: 100vw;
+    height: 100vh;
+    background-image:url("https://pbs.twimg.com/media/Ef7zhiGX0AAvZB6.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 2000px;
-    margin-top: -245px;
-    
+   
   }
-
-  .inviteText{
-    /* background-color: black; */
-  }
-
-  .invite h3{
-    margin-left: -462px;
-    padding: 475px;
-  
-  }
-
-  .invite h5{
-      margin-left: -47px;
-    padding: 31px;
-    margin-top: -434px;
+.h3Container {
+  margin-top: 60vh;
 }
   
+.inviteElement h2 {
+  color:#3e0e2bfc;
+  font-size: 20px;
+
+}
+.inviteElement h3 {
+  font-size: 15px;
+  text-align: center;
+}
+
 
 
 .neonText {
@@ -477,6 +467,5 @@ outline: none;
       box-shadow: none;
   }    
 }
-
 
 
